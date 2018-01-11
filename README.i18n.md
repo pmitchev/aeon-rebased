@@ -3,7 +3,7 @@ Monero daemon internationalization
 
 The Monero command line tools can be translated in various languages.
 
-In order to use the same translation workflow as the [Monero Core GUI](https://github.com/monero-project/monero-core), they use Qt Linguist translation files.  However, to avoid the dependencies on Qt this normally implies, they use a custom loader to read those files at runtime.
+In order to use the same translation workflow as the [Monero Core GUI](https://github.com/aeon-project/aeon-core), they use Qt Linguist translation files.  However, to avoid the dependencies on Qt this normally implies, they use a custom loader to read those files at runtime.
 
 ### Tools for translators
 
@@ -31,7 +31,7 @@ To build translations after modifying them:
 
 To test a translation:
 
-    LANG=es ./build/release/bin/monero-wallet-cli
+    LANG=es ./build/release/bin/aeon-wallet-cli
 
 To add new translatable strings in the source code:
 

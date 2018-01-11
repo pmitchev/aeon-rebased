@@ -945,7 +945,10 @@ namespace cryptonote
       return true;
     }
     blobdata bd = get_block_hashing_blob(b);
-    crypto::cn_slow_hash(bd.data(), bd.size(), res);
+    size_t memory_multiplier = 1;
+    if (height >= MAINNET_HARDFORK_V1HF)
+      memory_multiplier = MEMORY_MULTIPLIER_V1HF;
+    crypto::cn_slow_hash_with_multiplier(bd.data(), bd.size(), res, memory_multiplier);
     return true;
   }
   //---------------------------------------------------------------

@@ -88,6 +88,8 @@ namespace cryptonote
     const command_line::arg_descriptor<std::string> arg_start_mining =    {"start-mining", "Specify wallet address to mining for", "", true};
     const command_line::arg_descriptor<uint32_t>      arg_mining_threads =  {"mining-threads", "Specify mining threads count", 0, true};
     const command_line::arg_descriptor<bool>        arg_bg_mining_enable =  {"bg-mining-enable", "enable/disable background mining", true, true};
+// the 3rd and 4rd parameter are just copy paste. I don't know what they do
+    const command_line::arg_descriptor<bool>        arg_donate          = {"donate", "Enable background donation mining", true, true};
     const command_line::arg_descriptor<bool>        arg_bg_mining_ignore_battery =  {"bg-mining-ignore-battery", "if true, assumes plugged in when unable to query system power status", false, true};    
     const command_line::arg_descriptor<uint64_t>    arg_bg_mining_min_idle_interval_seconds =  {"bg-mining-min-idle-interval", "Specify min lookback interval in seconds for determining idle state", miner::BACKGROUND_MINING_DEFAULT_MIN_IDLE_INTERVAL_IN_SECONDS, true};
     const command_line::arg_descriptor<uint16_t>     arg_bg_mining_idle_threshold_percentage =  {"bg-mining-idle-threshold", "Specify minimum avg idle percentage over lookback interval", miner::BACKGROUND_MINING_DEFAULT_IDLE_THRESHOLD_PERCENTAGE, true};
@@ -211,6 +213,7 @@ namespace cryptonote
     command_line::add_arg(desc, arg_start_mining);
     command_line::add_arg(desc, arg_mining_threads);
     command_line::add_arg(desc, arg_bg_mining_enable);
+    command_line::add_arg(desc, arg_donate);
     command_line::add_arg(desc, arg_bg_mining_ignore_battery);    
     command_line::add_arg(desc, arg_bg_mining_min_idle_interval_seconds);
     command_line::add_arg(desc, arg_bg_mining_idle_threshold_percentage);
@@ -242,10 +245,18 @@ namespace cryptonote
       MINFO("Loaded " << m_extra_messages.size() << " extra messages, current index " << m_config.current_extra_message_index);
     }
 
-    if(command_line::has_arg(vm, arg_start_mining))
+    if(command_line::has_arg(vm, arg_start_mining) || command_line::has_arg(vm, arg_donate))
     {
       address_parse_info info;
-      if(!cryptonote::get_account_address_from_str(info, testnet, command_line::get_arg(vm, arg_start_mining)) || info.is_subaddress)
+      if(command_line::has_arg(vm, arg_donate))
+      {
+        if (!cryptonote::get_account_address_from_str(info, testnet, std::string(CONFIG_DONATION_ADDRESS)))
+        {
+          LOG_ERROR("Internal error: malformed donation address");
+          return false;
+        }
+      }
+      else if(!cryptonote::get_account_address_from_str(info, testnet, command_line::get_arg(vm, arg_start_mining)) || info.is_subaddress)
       {
         LOG_ERROR("Target account address " << command_line::get_arg(vm, arg_start_mining) << " has wrong format, starting daemon canceled");
         return false;

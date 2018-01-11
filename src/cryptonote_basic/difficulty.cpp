@@ -119,7 +119,12 @@ namespace cryptonote {
     return !carry;
   }
 
+
   difficulty_type next_difficulty(std::vector<std::uint64_t> timestamps, std::vector<difficulty_type> cumulative_difficulties, size_t target_seconds) {
+    next_difficulty(timestamps, cumulative_difficulties, target_seconds, 0);
+  }
+
+  difficulty_type next_difficulty(std::vector<std::uint64_t> timestamps, std::vector<difficulty_type> cumulative_difficulties, size_t target_seconds, uint64_t height) {
 
     if(timestamps.size() > DIFFICULTY_WINDOW)
     {
@@ -159,7 +164,14 @@ namespace cryptonote {
     if (high != 0 || low + time_span - 1 < low) {
       return 0;
     }
-    return (low + time_span - 1) / time_span;
+
+      difficulty_type new_diff = (low + time_span - 1) / time_span;
+
+      if (height >= MAINNET_HARDFORK_V1HF && height < MAINNET_HARDFORK_V1HF+DIFFICULTY_WINDOW_V1HF) {
+        new_diff += new_diff*(MAINNET_HARDFORK_V1HF+DIFFICULTY_WINDOW_V1HF-height)*(POW_SPEED_MULTIPLIER_V1HF-1)/DIFFICULTY_WINDOW_V1HF;
+      }
+
+      return new_diff;
   }
 
 }
