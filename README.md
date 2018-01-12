@@ -8,36 +8,36 @@ Portions Copyright (c) 2012-2013 The Cryptonote developers.
 - Web: [getmonero.org](https://getmonero.org)
 - Forum: [forum.getmonero.org](https://forum.getmonero.org)
 - Mail: [dev@getmonero.org](mailto:dev@getmonero.org)
-- GitHub: [https://github.com/aeon-project/monero](https://github.com/aeon-project/monero)
-- IRC: [#aeon-dev on Freenode](http://webchat.freenode.net/?randomnick=1&channels=%23aeon-dev&prompt=1&uio=d4)
+- GitHub: [https://github.com/aeonix/aeon](https://github.com/aeonix/aeon)
+- IRC: [#aeon on Freenode](http://webchat.freenode.net/?randomnick=1&channels=%23monero-dev&prompt=1&uio=d4)
 
 ## Vulnerability response
 
-- Our [Vulnerability Response Process](https://github.com/aeon-project/meta/blob/master/VULNERABILITY_RESPONSE_PROCESS.md) encourages responsible disclosure
+- Our [Vulnerability Response Process](https://github.com/monero-project/meta/blob/master/VULNERABILITY_RESPONSE_PROCESS.md) encourages responsible disclosure
 - We are also available via [HackerOne](https://hackerone.com/monero)
 
 ## Build
 
 | Operating System      | Processor | Status |
 | --------------------- | -------- |--------|
-| Ubuntu 16.04          |  i686    | [![Ubuntu 16.04 i686](https://build.getmonero.org/png?builder=aeon-static-ubuntu-i686)](https://build.getmonero.org/builders/aeon-static-ubuntu-i686)
-| Ubuntu 16.04          |  amd64   | [![Ubuntu 16.04 amd64](https://build.getmonero.org/png?builder=aeon-static-ubuntu-amd64)](https://build.getmonero.org/builders/aeon-static-ubuntu-amd64)
-| Ubuntu 16.04          |  armv7   | [![Ubuntu 16.04 armv7](https://build.getmonero.org/png?builder=aeon-static-ubuntu-arm7)](https://build.getmonero.org/builders/aeon-static-ubuntu-arm7)
-| Debian Stable         |  armv8   | [![Debian armv8](https://build.getmonero.org/png?builder=aeon-static-debian-armv8)](https://build.getmonero.org/builders/aeon-static-debian-armv8)
-| OSX 10.10             |  amd64   | [![OSX 10.10 amd64](https://build.getmonero.org/png?builder=aeon-static-osx-10.10)](https://build.getmonero.org/builders/aeon-static-osx-10.10)
-| OSX 10.11             |  amd64   | [![OSX 10.11 amd64](https://build.getmonero.org/png?builder=aeon-static-osx-10.11)](https://build.getmonero.org/builders/aeon-static-osx-10.11)
-| OSX 10.12             |  amd64   | [![OSX 10.12 amd64](https://build.getmonero.org/png?builder=aeon-static-osx-10.12)](https://build.getmonero.org/builders/aeon-static-osx-10.12)
-| FreeBSD 11            |  amd64   | [![FreeBSD 11 amd64](https://build.getmonero.org/png?builder=aeon-static-freebsd64)](https://build.getmonero.org/builders/aeon-static-freebsd64)
-| DragonFly BSD 4.6     |  amd64   | [![DragonFly BSD amd64](https://build.getmonero.org/png?builder=aeon-static-dragonflybsd-amd64)](https://build.getmonero.org/builders/aeon-static-dragonflybsd-amd64)
-| Windows (MSYS2/MinGW) |  i686    | [![Windows (MSYS2/MinGW) i686](https://build.getmonero.org/png?builder=aeon-static-win32)](https://build.getmonero.org/builders/aeon-static-win32)
-| Windows (MSYS2/MinGW) |  amd64   | [![Windows (MSYS2/MinGW) amd64](https://build.getmonero.org/png?builder=aeon-static-win64)](https://build.getmonero.org/builders/aeon-static-win64)
+| Ubuntu 16.04          |  i686    | [![Ubuntu 16.04 i686](https://build.getmonero.org/png?builder=monero-static-ubuntu-i686)](https://build.getmonero.org/builders/monero-static-ubuntu-i686)
+| Ubuntu 16.04          |  amd64   | [![Ubuntu 16.04 amd64](https://build.getmonero.org/png?builder=monero-static-ubuntu-amd64)](https://build.getmonero.org/builders/monero-static-ubuntu-amd64)
+| Ubuntu 16.04          |  armv7   | [![Ubuntu 16.04 armv7](https://build.getmonero.org/png?builder=monero-static-ubuntu-arm7)](https://build.getmonero.org/builders/monero-static-ubuntu-arm7)
+| Debian Stable         |  armv8   | [![Debian armv8](https://build.getmonero.org/png?builder=monero-static-debian-armv8)](https://build.getmonero.org/builders/monero-static-debian-armv8)
+| OSX 10.10             |  amd64   | [![OSX 10.10 amd64](https://build.getmonero.org/png?builder=monero-static-osx-10.10)](https://build.getmonero.org/builders/monero-static-osx-10.10)
+| OSX 10.11             |  amd64   | [![OSX 10.11 amd64](https://build.getmonero.org/png?builder=monero-static-osx-10.11)](https://build.getmonero.org/builders/monero-static-osx-10.11)
+| OSX 10.12             |  amd64   | [![OSX 10.12 amd64](https://build.getmonero.org/png?builder=monero-static-osx-10.12)](https://build.getmonero.org/builders/monero-static-osx-10.12)
+| FreeBSD 11            |  amd64   | [![FreeBSD 11 amd64](https://build.getmonero.org/png?builder=monero-static-freebsd64)](https://build.getmonero.org/builders/monero-static-freebsd64)
+| DragonFly BSD 4.6     |  amd64   | [![DragonFly BSD amd64](https://build.getmonero.org/png?builder=monero-static-dragonflybsd-amd64)](https://build.getmonero.org/builders/monero-static-dragonflybsd-amd64)
+| Windows (MSYS2/MinGW) |  i686    | [![Windows (MSYS2/MinGW) i686](https://build.getmonero.org/png?builder=monero-static-win32)](https://build.getmonero.org/builders/monero-static-win32)
+| Windows (MSYS2/MinGW) |  amd64   | [![Windows (MSYS2/MinGW) amd64](https://build.getmonero.org/png?builder=monero-static-win64)](https://build.getmonero.org/builders/monero-static-win64)
 
 ## Coverage
 
 | Type      | Status |
 |-----------|--------|
 | Coverity  | [![Coverity Status](https://scan.coverity.com/projects/9657/badge.svg)](https://scan.coverity.com/projects/9657/)
-| Coveralls | [![Coveralls Status](https://coveralls.io/repos/github/aeon-project/monero/badge.svg?branch=master)](https://coveralls.io/github/aeon-project/monero?branch=master)
+| Coveralls | [![Coveralls Status](https://coveralls.io/repos/github/monero-project/monero/badge.svg?branch=master)](https://coveralls.io/github/monero-project/monero?branch=master)
 | License   | [![License](https://img.shields.io/badge/license-BSD3-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
 ## Introduction
@@ -119,7 +119,7 @@ Installing a snap is very quick. Snaps are secure. They are isolated with all of
 
 * Arch Linux (via [AUR](https://aur.archlinux.org/)):
   - Stable release: [`monero`](https://aur.archlinux.org/packages/monero)
-  - Bleeding edge: [`aeon-git`](https://aur.archlinux.org/packages/aeon-git)
+  - Bleeding edge: [`monero-git`](https://aur.archlinux.org/packages/monero-git)
 
 * Void Linux:
 
@@ -249,7 +249,7 @@ Tested on a Raspberry Pi Zero with a clean install of minimal Raspbian Stretch (
 ```
 * Clone monero and checkout most recent release version:
 ```
-        git clone https://github.com/aeon-project/monero.git
+        git clone https://github.com/aeonix/aeon.git
 	cd monero
 	git checkout tags/v0.11.0.0
 ```
@@ -453,11 +453,11 @@ Then you can run make as usual.
 ### On Linux for Android (using docker):
 
         # Build image (select android64.Dockerfile for aarch64)
-        cd utils/build_scripts/ && docker build -f android32.Dockerfile -t aeon-android .
+        cd utils/build_scripts/ && docker build -f android32.Dockerfile -t monero-android .
         # Create container
-        docker create -it --name aeon-android aeon-android bash
+        docker create -it --name monero-android monero-android bash
         # Get binaries
-        docker cp aeon-android:/opt/android/monero/build/release/bin .
+        docker cp monero-android:/opt/android/monero/build/release/bin .
 
 ### Building portable statically linked binaries
 

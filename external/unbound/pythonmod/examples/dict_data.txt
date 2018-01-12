@@ -1,6 +1,6 @@
 *	*			web
-computer	poèítaèový	adj:		Zdenìk Bro¾
-computer	poèítaè	n:		
-domain	doména	n:		Zdenìk Bro¾
-query	otazník	n:		Zdenìk Bro¾
-network	sí»	n: [it.]	poèítaèová	
+computer	potaov	adj:		Zdenk Bro
+computer	pota	n:		
+domain	domna	n:		Zdenk Bro
+query	otaznk	n:		Zdenk Bro
+network	s	n: [it.]	potaov	
