@@ -64,6 +64,10 @@
 // COIN - number of smallest units in one coin
 #define COIN                                            ((uint64_t)1000000000000) // pow(10, 12)
 
+#define NO_FEE_PER_KB_FEE_MAX_HEIGHT                     -1
+#define DEFAULT_FEE                     10000000000
+#define MINIMUM_RELAY_FEE                     1000000
+
 #define FEE_PER_KB_OLD                                  ((uint64_t)10000000000) // pow(10, 10)
 #define FEE_PER_KB                                      ((uint64_t)2000000000) // 2 * pow(10, 9)
 #define DYNAMIC_FEE_PER_KB_BASE_FEE                     ((uint64_t)2000000000) // 2 * pow(10,9)

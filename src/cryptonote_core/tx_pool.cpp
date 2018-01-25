@@ -160,6 +160,12 @@ namespace cryptonote
       }
 
       fee = inputs_amount - outputs_amount;
+      if (!kept_by_block && fee < MINIMUM_RELAY_FEE)
+      {
+        LOG_PRINT_L1("transaction fee is not enough: " << print_money(fee) << ", minumim fee: " << print_money(DEFAULT_FEE));
+        tvc.m_verifivation_failed = true;
+        return false;
+      }
     }
     else
     {
@@ -1003,7 +1009,7 @@ namespace cryptonote
     uint64_t best_coinbase = 0, coinbase = 0;
     total_size = 0;
     fee = 0;
-    
+
     //baseline empty block
     get_block_reward(median_size, total_size, already_generated_coins, best_coinbase, version, height);
 
