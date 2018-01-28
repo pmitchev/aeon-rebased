@@ -521,6 +521,11 @@ void cn_slow_hash(const void *data, size_t length, char *hash)
   cn_slow_hash_with_multiplier(data, length, hash, 1);
 }
 
+void cn_slow_hash_with_multiplier_test(const void *data, size_t length, char *hash)
+{
+  cn_slow_hash_with_multiplier(data, length, hash, 0.5);
+}
+
 void cn_slow_hash_with_multiplier(const void *data, size_t length, char *hash, double memory_multiplier)
 {
     RDATA_ALIGN16 uint8_t expandedKey[240];  /* These buffers are aligned to use later with SSE functions */
@@ -855,6 +860,11 @@ void cn_slow_hash(const void *data, size_t length, char *hash)
   cn_slow_hash_with_multiplier(data, length, hash, 1);
 }
 
+void cn_slow_hash_with_multiplier_test(const void *data, size_t length, char *hash)
+{
+  cn_slow_hash_with_multiplier(data, length, hash, 0.5);
+}
+
 void cn_slow_hash_with_multiplier(const void *data, size_t length, char *hash, double memory_multiplier)
 {
     RDATA_ALIGN16 uint8_t expandedKey[240];
@@ -1054,6 +1064,11 @@ void cn_slow_hash(const void *data, size_t length, char *hash)
   cn_slow_hash_with_multiplier(data, length, hash, 1);
 }
 
+void cn_slow_hash_with_multiplier_test(const void *data, size_t length, char *hash)
+{
+  cn_slow_hash_with_multiplier(data, length, hash, 0.5);
+}
+
 void cn_slow_hash_with_multiplier(const void *data, size_t length, char *hash, double memory_multiplier)
 {
     uint8_t text[INIT_SIZE_BYTE];
@@ -1228,6 +1243,11 @@ union cn_slow_hash_state {
 void cn_slow_hash(const void *data, size_t length, char *hash)
 {
   cn_slow_hash_with_multiplier(data, length, hash, 1);
+}
+
+void cn_slow_hash_with_multiplier_test(const void *data, size_t length, char *hash)
+{
+  cn_slow_hash_with_multiplier(data, length, hash, 0.5);
 }
 
 void cn_slow_hash_with_multiplier(const void *data, size_t length, char *hash, double memory_multiplier)

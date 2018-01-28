@@ -71,6 +71,10 @@ namespace crypto {
     return h;
   }
 
+inline void cn_slow_hash_with_multiplier_test(const void *data, std::size_t length, hash &hash) {
+  cn_slow_hash_with_multiplier_test(data, length, reinterpret_cast<char *>(&hash));
+}
+
 inline void cn_slow_hash_with_multiplier(const void *data, std::size_t length, hash &hash, double memory_multiplier) {
   cn_slow_hash_with_multiplier(data, length, reinterpret_cast<char *>(&hash), memory_multiplier);
 }

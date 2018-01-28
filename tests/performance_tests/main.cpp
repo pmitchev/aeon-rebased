@@ -36,6 +36,7 @@
 #include "construct_tx.h"
 #include "check_tx_signature.h"
 #include "cn_slow_hash.h"
+#include "cn_slow_hash_with_multiplier_test.h"
 #include "derive_public_key.h"
 #include "derive_secret_key.h"
 #include "ge_frombytes_vartime.h"
@@ -116,6 +117,7 @@ int main(int argc, char** argv)
   TEST_PERFORMANCE2(test_wallet2_expand_subaddresses, 50, 200);
 
   TEST_PERFORMANCE0(test_cn_slow_hash);
+  TEST_PERFORMANCE0(test_cn_slow_hash_with_multiplier_test);
   TEST_PERFORMANCE1(test_cn_fast_hash, 32);
   TEST_PERFORMANCE1(test_cn_fast_hash, 16384);
 
