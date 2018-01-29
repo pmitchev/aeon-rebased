@@ -995,7 +995,7 @@ namespace cryptonote
   //TODO: investigate whether boolean return is appropriate
   bool tx_memory_pool::fill_block_template(block &bl, size_t median_size, uint64_t already_generated_coins, size_t &total_size, uint64_t &fee, uint64_t &expected_reward, uint8_t version)
   {
-    fill_block_template(bl, median_size, already_generated_coins, total_size, fee, expected_reward, version, 0);
+    return fill_block_template(bl, median_size, already_generated_coins, total_size, fee, expected_reward, version, 0);
   }
   bool tx_memory_pool::fill_block_template(block &bl, size_t median_size, uint64_t already_generated_coins, size_t &total_size, uint64_t &fee, uint64_t &expected_reward, uint8_t version, size_t height)
   {

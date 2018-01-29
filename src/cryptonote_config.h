@@ -50,10 +50,10 @@
 #define BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW               60
 
 // MONEY_SUPPLY - total number coins to be generated
-#define MONEY_SUPPLY ((uint64_t)-1)
+#define MONEY_SUPPLY ((uint64_t)(-1))
 #define EMISSION_SPEED_FACTOR_PER_MINUTE                (20)
 #define EMISSION_SPEED_FACTOR_PER_MINUTE_V1HF                (18)
-#define FINAL_SUBSIDY_PER_MINUTE ((uint64_t)0)
+#define FINAL_SUBSIDY_PER_MINUTE ((uint64_t)(0))
 
 #define CRYPTONOTE_REWARD_BLOCKS_WINDOW                 100
 #define CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V2    60000 //size of block (bytes) after which reward for block calculated using block size
@@ -66,7 +66,7 @@
 
 #define MINIMUM_RELAY_FEE                     1000000
 #define DEFAULT_FEE                     10000000000
-#define NO_FEE_PER_KB_FEE_MAX_HEIGHT                     -1
+#define NO_FEE_PER_KB_FEE_MAX_HEIGHT                     ((uint64_t)(-1))
 #define FEE_PER_KB_OLD                                  ((uint64_t)10000000000) // pow(10, 10)
 #define FEE_PER_KB                                      ((uint64_t)2000000000) // 2 * pow(10, 9)
 #define DYNAMIC_FEE_PER_KB_BASE_FEE                     ((uint64_t)2000000000) // 2 * pow(10,9)
@@ -83,7 +83,7 @@
 #define DIFFICULTY_WINDOW_V1HF                               360
 #define DIFFICULTY_LAG                                  15  // !!!
 #define DIFFICULTY_CUT                                  60  // timestamps to cut after sorting
-#define MAINNET_HARDFORK_V1HF  592000
+#define MAINNET_HARDFORK_V1HF  ((uint64_t)(592000))
 #define DIFFICULTY_BLOCKS_COUNT                         DIFFICULTY_WINDOW + DIFFICULTY_LAG
 #define POW_SPEED_MULTIPLIER_V1HF  2
 
